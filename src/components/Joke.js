@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Joke extends Component {
   constructor(props) {
     super(props);
-    this.state = {joke: ''};
+    this.state = {joke: 'Hihii...'};
   }
 
   newJoke = () => {
@@ -17,7 +17,7 @@ export default class Joke extends Component {
   }
 
   componentDidMount() {
-    this.newJoke();
+  
   }
 
 
@@ -25,7 +25,8 @@ export default class Joke extends Component {
     return (
       <div>
         <h1>Today's Chuck Norris Joke</h1>
-        {this.state.joke}
+        <p>{this.state.joke}</p>
+        <button onClick={this.newJoke}>New Joke</button>
       </div>
     )
   }
